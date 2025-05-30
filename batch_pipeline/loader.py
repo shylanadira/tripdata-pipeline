@@ -1,5 +1,5 @@
 from google.cloud import bigquery
-from config import PROJECT_ID, BUCKET_NAME, GCS_FOLDER, BQ_DATASET
+from batch_pipeline.config import PROJECT_ID, BUCKET_NAME, GCS_FOLDER, BQ_DATASET
 
 def load_to_bigquery():
     client = bigquery.Client(project=PROJECT_ID)
@@ -19,18 +19,18 @@ def load_to_bigquery():
 
     files_to_load = {
         "green_tripdata_full.csv": {
-            "table": "raw_trip_data",
+            "table": "staging_trip_data",
             "source_format": bigquery.SourceFormat.CSV,
             "partition_field": "lpep_pickup_datetime",
             "skip_leading_rows": 1
         },
         "payment_type.csv": {
-            "table": "raw_payment_type",
+            "table": "staging_payment_type",
             "source_format": bigquery.SourceFormat.CSV,
             "skip_leading_rows": 1
         },
         "taxi_zone_lookup.csv": {
-            "table": "raw_taxi_zone",
+            "table": "staging_taxi_zone",
             "source_format": bigquery.SourceFormat.CSV,
             "skip_leading_rows": 1
         }
