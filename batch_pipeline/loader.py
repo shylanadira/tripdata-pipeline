@@ -19,18 +19,18 @@ def load_to_bigquery():
 
     files_to_load = {
         "green_tripdata_full.csv": {
-            "table": "staging_trip_data",
+            "table": "raw_trip_data",
             "source_format": bigquery.SourceFormat.CSV,
             "partition_field": "lpep_pickup_datetime",
             "skip_leading_rows": 1
         },
         "payment_type.csv": {
-            "table": "staging_payment_type",
+            "table": "raw_payment_type",
             "source_format": bigquery.SourceFormat.CSV,
             "skip_leading_rows": 1
         },
         "taxi_zone_lookup.csv": {
-            "table": "staging_taxi_zone",
+            "table": "raw_taxi_zone",
             "source_format": bigquery.SourceFormat.CSV,
             "skip_leading_rows": 1
         }
