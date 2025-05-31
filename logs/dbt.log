@@ -1,0 +1,629 @@
+[0m16:10:45.590545 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014587BE9B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014588CC3CA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014588CC3AC0>]}
+
+
+============================== 16:10:45.596985 | eb6a7320-8b89-403a-987d-df6877890b2b ==============================
+[0m16:10:45.596985 [info ] [MainThread]: Running with dbt=1.9.5
+[0m16:10:45.598004 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Shyla\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt debug', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:10:45.651737 [info ] [MainThread]: dbt version: 1.9.5
+[0m16:10:45.652725 [info ] [MainThread]: python version: 3.10.11
+[0m16:10:45.653739 [info ] [MainThread]: python path: C:\Users\Shyla\Documents\capstone modul 3\venv\Scripts\python.exe
+[0m16:10:45.655725 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m16:10:53.953000 [info ] [MainThread]: Using profiles dir at C:\Users\Shyla\.dbt
+[0m16:10:53.955207 [info ] [MainThread]: Using profiles.yml file at C:\Users\Shyla\.dbt\profiles.yml
+[0m16:10:53.957003 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Shyla\Documents\capstone modul 3\dbt_project.yml
+[0m16:10:53.958008 [info ] [MainThread]: adapter type: bigquery
+[0m16:10:53.959532 [info ] [MainThread]: adapter version: 1.9.2
+[0m16:10:53.961580 [info ] [MainThread]: Configuration:
+[0m16:10:53.962834 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:10:53.963812 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m16:10:53.964849 [info ] [MainThread]: Required dependencies:
+[0m16:10:53.966853 [debug] [MainThread]: Executing "git --help"
+[0m16:10:54.088743 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:10:54.089744 [debug] [MainThread]: STDERR: "b''"
+[0m16:10:54.090742 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:10:54.093377 [info ] [MainThread]: Connection:
+[0m16:10:54.094880 [info ] [MainThread]:   method: service-account
+[0m16:10:54.095878 [info ] [MainThread]:   database: purwadika
+[0m16:10:54.096878 [info ] [MainThread]:   execution_project: purwadika
+[0m16:10:54.098884 [info ] [MainThread]:   schema: jcdeol3_capstone3_shyla
+[0m16:10:54.099325 [info ] [MainThread]:   location: None
+[0m16:10:54.101458 [info ] [MainThread]:   priority: None
+[0m16:10:54.102468 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m16:10:54.103471 [info ] [MainThread]:   impersonate_service_account: None
+[0m16:10:54.104473 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m16:10:54.105978 [info ] [MainThread]:   job_retries: 1
+[0m16:10:54.107219 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m16:10:54.109516 [info ] [MainThread]:   job_execution_timeout_seconds: None
+[0m16:10:54.110818 [info ] [MainThread]:   timeout_seconds: None
+[0m16:10:54.112919 [info ] [MainThread]:   client_id: None
+[0m16:10:54.114033 [info ] [MainThread]:   token_uri: None
+[0m16:10:54.115029 [info ] [MainThread]:   compute_region: None
+[0m16:10:54.116060 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m16:10:54.117193 [info ] [MainThread]:   gcs_bucket: None
+[0m16:10:54.120115 [info ] [MainThread]:   dataproc_batch: None
+[0m16:10:54.121254 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m16:10:55.530628 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m16:10:55.530628 [debug] [MainThread]: On debug: select 1 as id
+[0m16:10:55.530628 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:10:55.823037 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:10:55.824680 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m16:10:55.826741 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\Shyla\Documents\capstone modul 3\dbt_project.yml> not found
+
+[0m16:10:55.827741 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  Unable to generate access token, if you're using impersonate_service_account, make sure your initial account has the "roles/iam.serviceAccountTokenCreator" role on the account you are trying to impersonate.
+  
+  ('invalid_grant: Invalid grant: account not found', {'error': 'invalid_grant', 'error_description': 'Invalid grant: account not found'})
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:10:55.830741 [debug] [MainThread]: Command `dbt debug` failed at 16:10:55.830741 after 10.41 seconds
+[0m16:10:55.831725 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:10:55.832728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014587BE9B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000145AB5F7910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000145AB6832B0>]}
+[0m16:10:55.833838 [debug] [MainThread]: Flushing usage events
+[0m16:10:57.357654 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:12:43.967327 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025146115B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000251471F3CA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000251471F3AC0>]}
+
+
+============================== 16:12:43.973351 | 416609be-569e-48ce-9b7d-7b2fc19d78e4 ==============================
+[0m16:12:43.973351 [info ] [MainThread]: Running with dbt=1.9.5
+[0m16:12:43.974430 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Shyla\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt init dbt_capstone', 'send_anonymous_usage_stats': 'True'}
+[0m16:12:44.003107 [info ] [MainThread]: A project called dbt_capstone already exists here.
+[0m16:12:44.006109 [debug] [MainThread]: Command `dbt init` succeeded at 16:12:44.006109 after 0.18 seconds
+[0m16:12:44.007114 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025146115B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000251471F3550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000251471F39D0>]}
+[0m16:12:44.007114 [debug] [MainThread]: Flushing usage events
+[0m16:12:45.400681 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:14:59.884993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020565AF5A80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020567BA3B80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020567BA39A0>]}
+
+
+============================== 16:14:59.890378 | 36feb1d7-a442-410b-802d-a2fd1bdc80ea ==============================
+[0m16:14:59.890378 [info ] [MainThread]: Running with dbt=1.9.5
+[0m16:14:59.890378 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Shyla\\.dbt', 'log_path': 'logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:14:59.925663 [info ] [MainThread]: dbt version: 1.9.5
+[0m16:14:59.925663 [info ] [MainThread]: python version: 3.10.11
+[0m16:14:59.925663 [info ] [MainThread]: python path: C:\Users\Shyla\Documents\capstone modul 3\venv\Scripts\python.exe
+[0m16:14:59.925663 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m16:15:04.820131 [info ] [MainThread]: Using profiles dir at C:\Users\Shyla\.dbt
+[0m16:15:04.820131 [info ] [MainThread]: Using profiles.yml file at C:\Users\Shyla\.dbt\profiles.yml
+[0m16:15:04.820131 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Shyla\Documents\capstone modul 3\dbt_project.yml
+[0m16:15:04.820131 [info ] [MainThread]: adapter type: bigquery
+[0m16:15:04.820131 [info ] [MainThread]: adapter version: 1.9.2
+[0m16:15:04.820131 [info ] [MainThread]: Configuration:
+[0m16:15:04.832971 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:15:04.834389 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m16:15:04.835552 [info ] [MainThread]: Required dependencies:
+[0m16:15:04.837551 [debug] [MainThread]: Executing "git --help"
+[0m16:15:04.921022 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:15:04.921022 [debug] [MainThread]: STDERR: "b''"
+[0m16:15:04.921022 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:15:04.921022 [info ] [MainThread]: Connection:
+[0m16:15:04.925499 [info ] [MainThread]:   method: service-account
+[0m16:15:04.925499 [info ] [MainThread]:   database: purwadika
+[0m16:15:04.927886 [info ] [MainThread]:   execution_project: purwadika
+[0m16:15:04.929984 [info ] [MainThread]:   schema: jcdeol3_capstone3_shyla
+[0m16:15:04.931084 [info ] [MainThread]:   location: None
+[0m16:15:04.931084 [info ] [MainThread]:   priority: None
+[0m16:15:04.931084 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m16:15:04.934701 [info ] [MainThread]:   impersonate_service_account: None
+[0m16:15:04.936796 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m16:15:04.937904 [info ] [MainThread]:   job_retries: 1
+[0m16:15:04.937904 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m16:15:04.937904 [info ] [MainThread]:   job_execution_timeout_seconds: None
+[0m16:15:04.937904 [info ] [MainThread]:   timeout_seconds: None
+[0m16:15:04.941041 [info ] [MainThread]:   client_id: None
+[0m16:15:04.941041 [info ] [MainThread]:   token_uri: None
+[0m16:15:04.943761 [info ] [MainThread]:   compute_region: None
+[0m16:15:04.943761 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m16:15:04.943761 [info ] [MainThread]:   gcs_bucket: None
+[0m16:15:04.946673 [info ] [MainThread]:   dataproc_batch: None
+[0m16:15:04.948167 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m16:15:05.998045 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m16:15:05.998045 [debug] [MainThread]: On debug: select 1 as id
+[0m16:15:05.998045 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:15:06.186501 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:15:06.187494 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m16:15:06.189507 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\Shyla\Documents\capstone modul 3\dbt_project.yml> not found
+
+[0m16:15:06.190495 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  Unable to generate access token, if you're using impersonate_service_account, make sure your initial account has the "roles/iam.serviceAccountTokenCreator" role on the account you are trying to impersonate.
+  
+  ('invalid_grant: Invalid grant: account not found', {'error': 'invalid_grant', 'error_description': 'Invalid grant: account not found'})
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:15:06.193483 [debug] [MainThread]: Command `dbt debug` failed at 16:15:06.192492 after 6.43 seconds
+[0m16:15:06.193483 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:15:06.194501 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020565AF5A80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002050A5F2C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002050A5F0160>]}
+[0m16:15:06.195486 [debug] [MainThread]: Flushing usage events
+[0m16:15:07.598865 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:23:33.571430 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026069361A80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002606B40FB80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002606B40F9A0>]}
+
+
+============================== 16:23:33.571430 | 176cc2bf-7cc4-4a68-a545-7437f5bf0ad0 ==============================
+[0m16:23:33.571430 [info ] [MainThread]: Running with dbt=1.9.5
+[0m16:23:33.571430 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Shyla\\.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:23:33.607563 [info ] [MainThread]: dbt version: 1.9.5
+[0m16:23:33.607563 [info ] [MainThread]: python version: 3.10.11
+[0m16:23:33.607563 [info ] [MainThread]: python path: C:\Users\Shyla\Documents\capstone modul 3\venv\Scripts\python.exe
+[0m16:23:33.607563 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m16:23:38.495316 [info ] [MainThread]: Using profiles dir at C:\Users\Shyla\.dbt
+[0m16:23:38.495316 [info ] [MainThread]: Using profiles.yml file at C:\Users\Shyla\.dbt\profiles.yml
+[0m16:23:38.511165 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Shyla\Documents\capstone modul 3\dbt_project.yml
+[0m16:23:38.511165 [info ] [MainThread]: adapter type: bigquery
+[0m16:23:38.511165 [info ] [MainThread]: adapter version: 1.9.2
+[0m16:23:38.511165 [info ] [MainThread]: Configuration:
+[0m16:23:38.515195 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:23:38.516702 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m16:23:38.518703 [info ] [MainThread]: Required dependencies:
+[0m16:23:38.519812 [debug] [MainThread]: Executing "git --help"
+[0m16:23:38.599886 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:23:38.600924 [debug] [MainThread]: STDERR: "b''"
+[0m16:23:38.602011 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:23:38.603009 [info ] [MainThread]: Connection:
+[0m16:23:38.604010 [info ] [MainThread]:   method: service-account
+[0m16:23:38.605020 [info ] [MainThread]:   database: purwadika
+[0m16:23:38.606254 [info ] [MainThread]:   execution_project: purwadika
+[0m16:23:38.607520 [info ] [MainThread]:   schema: jcdeol3_capstone3_shyla
+[0m16:23:38.609523 [info ] [MainThread]:   location: None
+[0m16:23:38.610525 [info ] [MainThread]:   priority: None
+[0m16:23:38.611471 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m16:23:38.611471 [info ] [MainThread]:   impersonate_service_account: None
+[0m16:23:38.611471 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m16:23:38.611471 [info ] [MainThread]:   job_retries: 1
+[0m16:23:38.617592 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m16:23:38.618580 [info ] [MainThread]:   job_execution_timeout_seconds: None
+[0m16:23:38.619417 [info ] [MainThread]:   timeout_seconds: None
+[0m16:23:38.619417 [info ] [MainThread]:   client_id: None
+[0m16:23:38.619417 [info ] [MainThread]:   token_uri: None
+[0m16:23:38.619417 [info ] [MainThread]:   compute_region: None
+[0m16:23:38.619417 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m16:23:38.619417 [info ] [MainThread]:   gcs_bucket: None
+[0m16:23:38.619417 [info ] [MainThread]:   dataproc_batch: None
+[0m16:23:38.619417 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m16:23:39.629233 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m16:23:39.629233 [debug] [MainThread]: On debug: select 1 as id
+[0m16:23:39.629233 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:23:39.868232 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:23:39.869581 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m16:23:39.870601 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\Shyla\Documents\capstone modul 3\dbt_project.yml> not found
+
+[0m16:23:39.871654 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  Unable to generate access token, if you're using impersonate_service_account, make sure your initial account has the "roles/iam.serviceAccountTokenCreator" role on the account you are trying to impersonate.
+  
+  ('invalid_grant: Invalid grant: account not found', {'error': 'invalid_grant', 'error_description': 'Invalid grant: account not found'})
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:23:39.874274 [debug] [MainThread]: Command `dbt debug` failed at 16:23:39.874274 after 6.44 seconds
+[0m16:23:39.874274 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:23:39.874274 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026069361A80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002600DDD2FB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002600DDD2AA0>]}
+[0m16:23:39.874274 [debug] [MainThread]: Flushing usage events
+[0m16:23:41.287127 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:24:35.316156 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F32FE5A80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F35097BE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F35097A00>]}
+
+
+============================== 16:24:35.316156 | ad5f7650-2ef2-4073-bb38-96818d36a650 ==============================
+[0m16:24:35.316156 [info ] [MainThread]: Running with dbt=1.9.5
+[0m16:24:35.316156 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Shyla\\Documents\\capstone modul 3\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Shyla\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:24:35.351895 [info ] [MainThread]: dbt version: 1.9.5
+[0m16:24:35.351895 [info ] [MainThread]: python version: 3.10.11
+[0m16:24:35.351895 [info ] [MainThread]: python path: C:\Users\Shyla\Documents\capstone modul 3\venv\Scripts\python.exe
+[0m16:24:35.355005 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m16:24:39.918963 [info ] [MainThread]: Using profiles dir at C:\Users\Shyla\.dbt
+[0m16:24:39.918963 [info ] [MainThread]: Using profiles.yml file at C:\Users\Shyla\.dbt\profiles.yml
+[0m16:24:39.929337 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Shyla\Documents\capstone modul 3\dbt_project.yml
+[0m16:24:39.929337 [info ] [MainThread]: adapter type: bigquery
+[0m16:24:39.929337 [info ] [MainThread]: adapter version: 1.9.2
+[0m16:24:40.043486 [info ] [MainThread]: Configuration:
+[0m16:24:40.043486 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:24:40.056928 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:24:40.056928 [info ] [MainThread]: Required dependencies:
+[0m16:24:40.059504 [debug] [MainThread]: Executing "git --help"
+[0m16:24:40.142057 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:24:40.143073 [debug] [MainThread]: STDERR: "b''"
+[0m16:24:40.144088 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:24:40.145137 [info ] [MainThread]: Connection:
+[0m16:24:40.146651 [info ] [MainThread]:   method: service-account
+[0m16:24:40.147658 [info ] [MainThread]:   database: purwadika
+[0m16:24:40.148657 [info ] [MainThread]:   execution_project: purwadika
+[0m16:24:40.150054 [info ] [MainThread]:   schema: jcdeol3_capstone3_shyla
+[0m16:24:40.151106 [info ] [MainThread]:   location: None
+[0m16:24:40.152153 [info ] [MainThread]:   priority: None
+[0m16:24:40.152635 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m16:24:40.152635 [info ] [MainThread]:   impersonate_service_account: None
+[0m16:24:40.152635 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m16:24:40.156465 [info ] [MainThread]:   job_retries: 1
+[0m16:24:40.156465 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m16:24:40.156465 [info ] [MainThread]:   job_execution_timeout_seconds: None
+[0m16:24:40.156465 [info ] [MainThread]:   timeout_seconds: None
+[0m16:24:40.160203 [info ] [MainThread]:   client_id: None
+[0m16:24:40.160676 [info ] [MainThread]:   token_uri: None
+[0m16:24:40.161699 [info ] [MainThread]:   compute_region: None
+[0m16:24:40.162961 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m16:24:40.162961 [info ] [MainThread]:   gcs_bucket: None
+[0m16:24:40.165737 [info ] [MainThread]:   dataproc_batch: None
+[0m16:24:40.167494 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m16:24:41.180134 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m16:24:41.180134 [debug] [MainThread]: On debug: select 1 as id
+[0m16:24:41.180134 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:24:41.912473 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:24:41.913698 [info ] [MainThread]: [31m1 check failed:[0m
+[0m16:24:41.914707 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  Unable to generate access token, if you're using impersonate_service_account, make sure your initial account has the "roles/iam.serviceAccountTokenCreator" role on the account you are trying to impersonate.
+  
+  ('invalid_grant: Invalid grant: account not found', {'error': 'invalid_grant', 'error_description': 'Invalid grant: account not found'})
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:24:41.917837 [debug] [MainThread]: Command `dbt debug` failed at 16:24:41.917837 after 6.72 seconds
+[0m16:24:41.918877 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:24:41.919886 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F32FE5A80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F57A76F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F57A75330>]}
+[0m16:24:41.920875 [debug] [MainThread]: Flushing usage events
+[0m16:24:43.574236 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:32:28.313076 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E99765AE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E9A84BCD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E9A84BAF0>]}
+
+
+============================== 16:32:28.322745 | 47a4431f-4f5e-4c7d-a939-4a0ba89e3ee2 ==============================
+[0m16:32:28.322745 [info ] [MainThread]: Running with dbt=1.9.5
+[0m16:32:28.322745 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Shyla\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\Shyla\\Documents\\capstone modul 3\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:32:28.377905 [info ] [MainThread]: dbt version: 1.9.5
+[0m16:32:28.378906 [info ] [MainThread]: python version: 3.10.11
+[0m16:32:28.379907 [info ] [MainThread]: python path: C:\Users\Shyla\Documents\capstone modul 3\venv\Scripts\python.exe
+[0m16:32:28.381928 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m16:32:34.986500 [info ] [MainThread]: Using profiles dir at C:\Users\Shyla\.dbt
+[0m16:32:34.986500 [info ] [MainThread]: Using profiles.yml file at C:\Users\Shyla\.dbt\profiles.yml
+[0m16:32:34.986500 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Shyla\Documents\capstone modul 3\dbt_project.yml
+[0m16:32:35.001150 [info ] [MainThread]: adapter type: bigquery
+[0m16:32:35.001150 [info ] [MainThread]: adapter version: 1.9.2
+[0m16:32:35.115028 [info ] [MainThread]: Configuration:
+[0m16:32:35.129555 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:32:35.131026 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:32:35.131026 [info ] [MainThread]: Required dependencies:
+[0m16:32:35.131026 [debug] [MainThread]: Executing "git --help"
+[0m16:32:35.227671 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:32:35.229685 [debug] [MainThread]: STDERR: "b''"
+[0m16:32:35.230684 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:32:35.232023 [info ] [MainThread]: Connection:
+[0m16:32:35.233014 [info ] [MainThread]:   method: service-account
+[0m16:32:35.233014 [info ] [MainThread]:   database: purwadika
+[0m16:32:35.234299 [info ] [MainThread]:   execution_project: purwadika
+[0m16:32:35.235774 [info ] [MainThread]:   schema: jcdeol3_capstone3_shyla
+[0m16:32:35.236810 [info ] [MainThread]:   location: None
+[0m16:32:35.238254 [info ] [MainThread]:   priority: None
+[0m16:32:35.239411 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m16:32:35.240419 [info ] [MainThread]:   impersonate_service_account: None
+[0m16:32:35.241400 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m16:32:35.243524 [info ] [MainThread]:   job_retries: 1
+[0m16:32:35.244524 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m16:32:35.245535 [info ] [MainThread]:   job_execution_timeout_seconds: None
+[0m16:32:35.247158 [info ] [MainThread]:   timeout_seconds: None
+[0m16:32:35.249543 [info ] [MainThread]:   client_id: None
+[0m16:32:35.249543 [info ] [MainThread]:   token_uri: None
+[0m16:32:35.249543 [info ] [MainThread]:   compute_region: None
+[0m16:32:35.249543 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m16:32:35.249543 [info ] [MainThread]:   gcs_bucket: None
+[0m16:32:35.249543 [info ] [MainThread]:   dataproc_batch: None
+[0m16:32:35.249543 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m16:32:36.244818 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m16:32:36.244818 [debug] [MainThread]: On debug: select 1 as id
+[0m16:32:36.244818 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:32:36.424823 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:32:36.424823 [info ] [MainThread]: [31m1 check failed:[0m
+[0m16:32:36.424823 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  Unable to generate access token, if you're using impersonate_service_account, make sure your initial account has the "roles/iam.serviceAccountTokenCreator" role on the account you are trying to impersonate.
+  
+  ('invalid_grant: Invalid grant: account not found', {'error': 'invalid_grant', 'error_description': 'Invalid grant: account not found'})
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:32:36.434345 [debug] [MainThread]: Command `dbt debug` failed at 16:32:36.434345 after 8.26 seconds
+[0m16:32:36.434345 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:32:36.434345 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022E99765AE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EBD203190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EBD1CF6D0>]}
+[0m16:32:36.434345 [debug] [MainThread]: Flushing usage events
+[0m16:32:38.981476 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:58:51.256378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000275A9155AE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000275AB20BCD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000275AB20BAF0>]}
+
+
+============================== 12:58:51.268093 | 5693c69d-f515-45aa-9b88-6bb673dfbf15 ==============================
+[0m12:58:51.268093 [info ] [MainThread]: Running with dbt=1.9.5
+[0m12:58:51.270429 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Shyla\\Documents\\capstone modul 3\\logs', 'profiles_dir': 'C:\\Users\\Shyla\\.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt init dbt_capstone', 'send_anonymous_usage_stats': 'True'}
+[0m12:58:51.363846 [info ] [MainThread]: Setting up your profile.
+[0m13:04:54.747939 [info ] [MainThread]: Profile dbt_capstone written to C:\Users\Shyla\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m13:04:54.758226 [debug] [MainThread]: Command `dbt init` succeeded at 13:04:54.758226 after 363.71 seconds
+[0m13:04:54.761024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000275A9155AE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000275CDAFFBB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000275CDAFEFB0>]}
+[0m13:04:54.764065 [debug] [MainThread]: Flushing usage events
+[0m13:04:58.314238 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:08:25.178128 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024EFFC95B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E80E7BD00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E80E7BB20>]}
+
+
+============================== 13:08:25.186467 | 1a6680b1-7068-40fb-b9fe-1465e64b88d9 ==============================
+[0m13:08:25.186467 [info ] [MainThread]: Running with dbt=1.9.5
+[0m13:08:25.186467 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Shyla\\Documents\\capstone modul 3\\logs', 'profiles_dir': 'C:\\Users\\Shyla\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:08:25.259351 [info ] [MainThread]: dbt version: 1.9.5
+[0m13:08:25.259351 [info ] [MainThread]: python version: 3.10.11
+[0m13:08:25.263058 [info ] [MainThread]: python path: C:\Users\Shyla\Documents\capstone modul 3\venv\Scripts\python.exe
+[0m13:08:25.263058 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m13:08:32.926924 [info ] [MainThread]: Using profiles dir at C:\Users\Shyla\.dbt
+[0m13:08:32.930724 [info ] [MainThread]: Using profiles.yml file at C:\Users\Shyla\.dbt\profiles.yml
+[0m13:08:32.930724 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Shyla\Documents\capstone modul 3\dbt_project.yml
+[0m13:08:32.930724 [info ] [MainThread]: adapter type: bigquery
+[0m13:08:32.934999 [info ] [MainThread]: adapter version: 1.9.2
+[0m13:08:33.150982 [info ] [MainThread]: Configuration:
+[0m13:08:33.159237 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:08:33.159237 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m13:08:33.163433 [info ] [MainThread]: Required dependencies:
+[0m13:08:33.163433 [debug] [MainThread]: Executing "git --help"
+[0m13:08:33.300407 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:08:33.300407 [debug] [MainThread]: STDERR: "b''"
+[0m13:08:33.303410 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:08:33.303410 [info ] [MainThread]: Connection:
+[0m13:08:33.306093 [info ] [MainThread]:   method: service-account
+[0m13:08:33.308614 [info ] [MainThread]:   database: purwadika
+[0m13:08:33.308614 [info ] [MainThread]:   execution_project: purwadika
+[0m13:08:33.311659 [info ] [MainThread]:   schema: jcdeol3_capstone3_shyla
+[0m13:08:33.311659 [info ] [MainThread]:   location: US
+[0m13:08:33.316767 [info ] [MainThread]:   priority: interactive
+[0m13:08:33.316767 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m13:08:33.319792 [info ] [MainThread]:   impersonate_service_account: None
+[0m13:08:33.319792 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m13:08:33.324787 [info ] [MainThread]:   job_retries: 1
+[0m13:08:33.324787 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m13:08:33.324787 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m13:08:33.324787 [info ] [MainThread]:   timeout_seconds: 300
+[0m13:08:33.324787 [info ] [MainThread]:   client_id: None
+[0m13:08:33.334880 [info ] [MainThread]:   token_uri: None
+[0m13:08:33.337683 [info ] [MainThread]:   compute_region: None
+[0m13:08:33.337683 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m13:08:33.341335 [info ] [MainThread]:   gcs_bucket: None
+[0m13:08:33.341335 [info ] [MainThread]:   dataproc_batch: None
+[0m13:08:33.345233 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m13:08:35.550233 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m13:08:35.554263 [debug] [MainThread]: On debug: select 1 as id
+[0m13:08:35.556277 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:08:35.559484 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery " "client: '[Errno 22] Invalid argument: '"capstone modul 3/secrets/key.json"''
+[0m13:08:35.561239 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+select 1 as id
+[0m13:08:35.563251 [debug] [MainThread]: BigQuery adapter: Database Error
+  [Errno 22] Invalid argument: '"capstone modul 3/secrets/key.json"'
+[0m13:08:35.565271 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m13:08:35.566785 [info ] [MainThread]: [31m1 check failed:[0m
+[0m13:08:35.569714 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >'NoneType' object has no attribute 'close'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m13:08:35.572849 [debug] [MainThread]: Command `dbt debug` failed at 13:08:35.572849 after 10.65 seconds
+[0m13:08:35.574869 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024EFFC95B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024EA3750FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024EA3751FF0>]}
+[0m13:08:35.576351 [debug] [MainThread]: Flushing usage events
+[0m13:08:39.697659 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:10:00.742041 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236FE5E9B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236FF6C3CA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236FF6C3AC0>]}
+
+
+============================== 13:10:00.752734 | 9344fbb2-f055-4e9a-98a2-13140bd94449 ==============================
+[0m13:10:00.752734 [info ] [MainThread]: Running with dbt=1.9.5
+[0m13:10:00.752734 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Shyla\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:10:00.808015 [info ] [MainThread]: dbt version: 1.9.5
+[0m13:10:00.815101 [info ] [MainThread]: python version: 3.10.11
+[0m13:10:00.816790 [info ] [MainThread]: python path: C:\Users\Shyla\Documents\capstone modul 3\venv\Scripts\python.exe
+[0m13:10:00.818775 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m13:10:08.482715 [info ] [MainThread]: Using profiles dir at C:\Users\Shyla\.dbt
+[0m13:10:08.482715 [info ] [MainThread]: Using profiles.yml file at C:\Users\Shyla\.dbt\profiles.yml
+[0m13:10:08.486137 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Shyla\Documents\capstone modul 3\dbt_project.yml
+[0m13:10:08.488473 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m13:10:08.493411 [debug] [MainThread]: Command `dbt debug` failed at 13:10:08.493411 after 7.95 seconds
+[0m13:10:08.495949 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236FE5E9B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236A1FB5E40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236A2082F50>]}
+[0m13:10:08.496966 [debug] [MainThread]: Flushing usage events
+[0m13:10:13.651753 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:12:54.943961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCC1DD5B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCC2EB3CA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCC2EB3AC0>]}
+
+
+============================== 13:12:54.949067 | 5c9e8d06-da2c-4a9e-8078-bab93b080cf5 ==============================
+[0m13:12:54.949067 [info ] [MainThread]: Running with dbt=1.9.5
+[0m13:12:54.957091 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Shyla\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt init dbt_capstone', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:12:55.014607 [info ] [MainThread]: A project called dbt_capstone already exists here.
+[0m13:12:55.019683 [debug] [MainThread]: Command `dbt init` succeeded at 13:12:55.019683 after 0.30 seconds
+[0m13:12:55.019683 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCC1DD5B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCC2EB3550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCC2EB39D0>]}
+[0m13:12:55.022721 [debug] [MainThread]: Flushing usage events
+[0m13:12:58.116346 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:13:53.977627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021692175B70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021694223D00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021694223B20>]}
+
+
+============================== 13:13:53.984421 | 9990758b-522f-4d06-a278-75baca68bb13 ==============================
+[0m13:13:53.984421 [info ] [MainThread]: Running with dbt=1.9.5
+[0m13:13:53.984421 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\Shyla\\.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m13:13:54.048485 [info ] [MainThread]: dbt version: 1.9.5
+[0m13:13:54.051107 [info ] [MainThread]: python version: 3.10.11
+[0m13:13:54.052578 [info ] [MainThread]: python path: C:\Users\Shyla\Documents\capstone modul 3\venv\Scripts\python.exe
+[0m13:13:54.055090 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m13:14:01.715746 [info ] [MainThread]: Using profiles dir at C:\Users\Shyla\.dbt
+[0m13:14:01.715746 [info ] [MainThread]: Using profiles.yml file at C:\Users\Shyla\.dbt\profiles.yml
+[0m13:14:01.718845 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Shyla\Documents\capstone modul 3\dbt_project.yml
+[0m13:14:01.718845 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m13:14:01.725308 [debug] [MainThread]: Command `dbt debug` failed at 13:14:01.725308 after 7.92 seconds
+[0m13:14:01.725308 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021692175B70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216941B8FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216B6BE3130>]}
+[0m13:14:01.728386 [debug] [MainThread]: Flushing usage events
+[0m13:14:04.771962 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:14:45.288386 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000279FCDC5B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000279FEE7BD00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000279FEE7BB20>]}
+
+
+============================== 13:14:45.293533 | b4217054-9821-4f85-a596-d271146aa647 ==============================
+[0m13:14:45.293533 [info ] [MainThread]: Running with dbt=1.9.5
+[0m13:14:45.293533 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Shyla\\Documents\\capstone modul 3\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Shyla\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m13:14:45.363791 [info ] [MainThread]: dbt version: 1.9.5
+[0m13:14:45.363791 [info ] [MainThread]: python version: 3.10.11
+[0m13:14:45.366077 [info ] [MainThread]: python path: C:\Users\Shyla\Documents\capstone modul 3\venv\Scripts\python.exe
+[0m13:14:45.368291 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m13:14:53.023858 [info ] [MainThread]: Using profiles dir at C:\Users\Shyla\.dbt
+[0m13:14:53.023858 [info ] [MainThread]: Using profiles.yml file at C:\Users\Shyla\.dbt\profiles.yml
+[0m13:14:53.038346 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Shyla\Documents\capstone modul 3\dbt_project.yml
+[0m13:14:53.039862 [info ] [MainThread]: adapter type: bigquery
+[0m13:14:53.041653 [info ] [MainThread]: adapter version: 1.9.2
+[0m13:14:53.262226 [info ] [MainThread]: Configuration:
+[0m13:14:53.262226 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:14:53.262226 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m13:14:53.272625 [info ] [MainThread]: Required dependencies:
+[0m13:14:53.272625 [debug] [MainThread]: Executing "git --help"
+[0m13:14:53.397394 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:14:53.397394 [debug] [MainThread]: STDERR: "b''"
+[0m13:14:53.397394 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:14:53.404606 [info ] [MainThread]: Connection:
+[0m13:14:53.404606 [info ] [MainThread]:   method: service-account
+[0m13:14:53.404606 [info ] [MainThread]:   database: purwadika
+[0m13:14:53.404606 [info ] [MainThread]:   execution_project: purwadika
+[0m13:14:53.404606 [info ] [MainThread]:   schema: jcdeol3_capstone3_shyla
+[0m13:14:53.411275 [info ] [MainThread]:   location: US
+[0m13:14:53.413859 [info ] [MainThread]:   priority: interactive
+[0m13:14:53.415851 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m13:14:53.419461 [info ] [MainThread]:   impersonate_service_account: None
+[0m13:14:53.421255 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m13:14:53.421255 [info ] [MainThread]:   job_retries: 1
+[0m13:14:53.421255 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m13:14:53.421255 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m13:14:53.426593 [info ] [MainThread]:   timeout_seconds: 300
+[0m13:14:53.428432 [info ] [MainThread]:   client_id: None
+[0m13:14:53.428432 [info ] [MainThread]:   token_uri: None
+[0m13:14:53.428432 [info ] [MainThread]:   compute_region: None
+[0m13:14:53.434507 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m13:14:53.437408 [info ] [MainThread]:   gcs_bucket: None
+[0m13:14:53.437408 [info ] [MainThread]:   dataproc_batch: None
+[0m13:14:53.442254 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m13:14:55.334940 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m13:14:55.334940 [debug] [MainThread]: On debug: select 1 as id
+[0m13:14:55.337715 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:14:55.337715 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery " "client: '[Errno 22] Invalid argument: '"capstone modul 3/secrets/key.json"''
+[0m13:14:55.341627 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+select 1 as id
+[0m13:14:55.341627 [debug] [MainThread]: BigQuery adapter: Database Error
+  [Errno 22] Invalid argument: '"capstone modul 3/secrets/key.json"'
+[0m13:14:55.344844 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m13:14:55.346583 [info ] [MainThread]: [31m1 check failed:[0m
+[0m13:14:55.348606 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >'NoneType' object has no attribute 'close'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m13:14:55.351221 [debug] [MainThread]: Command `dbt debug` failed at 13:14:55.351221 after 10.26 seconds
+[0m13:14:55.352856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000279FCDC5B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000279A18C4880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000279A18C59F0>]}
+[0m13:14:55.352856 [debug] [MainThread]: Flushing usage events
+[0m13:14:58.218576 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:20:29.723914 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A063105A50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A0641EBC40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A0641EBA60>]}
+
+
+============================== 13:20:29.738000 | 9cb44361-ae92-4ece-8393-76fa3e4eb1e4 ==============================
+[0m13:20:29.738000 [info ] [MainThread]: Running with dbt=1.9.5
+[0m13:20:29.740914 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Shyla\\Documents\\capstone modul 3\\logs', 'profiles_dir': 'C:\\Users\\Shyla\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt debug', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:20:29.798806 [info ] [MainThread]: dbt version: 1.9.5
+[0m13:20:29.800423 [info ] [MainThread]: python version: 3.10.11
+[0m13:20:29.802036 [info ] [MainThread]: python path: C:\Users\Shyla\Documents\capstone modul 3\venv\Scripts\python.exe
+[0m13:20:29.802036 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m13:20:37.450367 [info ] [MainThread]: Using profiles dir at C:\Users\Shyla\.dbt
+[0m13:20:37.452387 [info ] [MainThread]: Using profiles.yml file at C:\Users\Shyla\.dbt\profiles.yml
+[0m13:20:37.454606 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Shyla\Documents\capstone modul 3\dbt_project.yml
+[0m13:20:37.454606 [info ] [MainThread]: adapter type: bigquery
+[0m13:20:37.454606 [info ] [MainThread]: adapter version: 1.9.2
+[0m13:20:37.690944 [info ] [MainThread]: Configuration:
+[0m13:20:37.690944 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:20:37.690944 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m13:20:37.702656 [info ] [MainThread]: Required dependencies:
+[0m13:20:37.702656 [debug] [MainThread]: Executing "git --help"
+[0m13:20:37.837237 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:20:37.839252 [debug] [MainThread]: STDERR: "b''"
+[0m13:20:37.839252 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:20:37.841265 [info ] [MainThread]: Connection:
+[0m13:20:37.843281 [info ] [MainThread]:   method: service-account
+[0m13:20:37.845298 [info ] [MainThread]:   database: purwadika
+[0m13:20:37.847308 [info ] [MainThread]:   execution_project: purwadika
+[0m13:20:37.850744 [info ] [MainThread]:   schema: jcdeol3_capstone3_shyla
+[0m13:20:37.851056 [info ] [MainThread]:   location: US
+[0m13:20:37.853897 [info ] [MainThread]:   priority: interactive
+[0m13:20:37.858075 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m13:20:37.859780 [info ] [MainThread]:   impersonate_service_account: None
+[0m13:20:37.859780 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m13:20:37.859780 [info ] [MainThread]:   job_retries: 1
+[0m13:20:37.859780 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m13:20:37.859780 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m13:20:37.859780 [info ] [MainThread]:   timeout_seconds: 300
+[0m13:20:37.870432 [info ] [MainThread]:   client_id: None
+[0m13:20:37.870432 [info ] [MainThread]:   token_uri: None
+[0m13:20:37.873363 [info ] [MainThread]:   compute_region: None
+[0m13:20:37.876247 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m13:20:37.876247 [info ] [MainThread]:   gcs_bucket: None
+[0m13:20:37.876247 [info ] [MainThread]:   dataproc_batch: None
+[0m13:20:37.881540 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m13:20:39.811291 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m13:20:39.811291 [debug] [MainThread]: On debug: select 1 as id
+[0m13:20:39.811291 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:20:40.446783 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m13:20:40.446783 [info ] [MainThread]: [31m1 check failed:[0m
+[0m13:20:40.451605 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  Unable to generate access token, if you're using impersonate_service_account, make sure your initial account has the "roles/iam.serviceAccountTokenCreator" role on the account you are trying to impersonate.
+  
+  ('invalid_grant: Invalid grant: account not found', {'error': 'invalid_grant', 'error_description': 'Invalid grant: account not found'})
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m13:20:40.455416 [debug] [MainThread]: Command `dbt debug` failed at 13:20:40.455416 after 10.96 seconds
+[0m13:20:40.457425 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m13:20:40.460051 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A063105A50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A063E5F2B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A006C249A0>]}
+[0m13:20:40.460424 [debug] [MainThread]: Flushing usage events
+[0m13:20:41.851298 [debug] [MainThread]: An error was encountered while trying to flush usage events

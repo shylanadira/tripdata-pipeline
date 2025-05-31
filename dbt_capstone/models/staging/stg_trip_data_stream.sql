@@ -1,0 +1,1 @@
+SELECT * FROM `purwadika.jcdeol3_capstone3_shyla.trip_data_stream`

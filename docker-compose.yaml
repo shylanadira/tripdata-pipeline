@@ -47,7 +47,7 @@ services:
       - ./plugins:/opt/airflow/plugins
       - ./dbt_capstone:/opt/airflow/dbt_capstone
       - ./secrets/key.json:/opt/airflow/secrets/key.json
-    command: scheduler
+    command: webserver
 
 volumes:
   postgres-db-volume:
